@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+    <script>
+        $('document').ready(function(){
+            var iframe = $('#vimeo-player')[0];
+            var player = $f(iframe);
+
+            $('#stop').click(function() {
+                player.api('pause');
+            });
+
+
+            $('#play').click(function(){
+                player.api('play');
+            });
+        });
+    </script>
+
+</head>
+<body>
+<center>
+    <h1>Vimeo Video Custom pause play button and a start from a given time</h1>
+
+
+<iframe id="vimeo-player" src="http://player.vimeo.com/video/40977539#t=0h1m2s?api=1" width="560" height="312" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+<br>
+<button id="stop">Pause</button>
+<button id="play">Start</button>
+
+</center>
+</body>
+
+
+
+</html>
